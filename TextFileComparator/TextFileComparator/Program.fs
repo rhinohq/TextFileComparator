@@ -50,8 +50,8 @@ let main argv =
         then printfn "File 2 contains file 1"
     else
         printfn "Files are not the same. Checking individual lines..."
-        let lines_one = File.ReadLines(file_one_path)
-        let lines_two = File.ReadLines(file_two_path)
+        let lines_one = File.ReadLines file_one_path
+        let lines_two = File.ReadLines file_two_path
         checkLines lines_one lines_two
 
     0 // return an integer exit code
