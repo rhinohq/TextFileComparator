@@ -40,6 +40,7 @@ let main argv =
     let file_two_contents = File.ReadAllText file_two_path
     printfn "Read text files\n"
 
+    printfn "Validating text files..."
     if file_one_contents.Equals file_two_contents then
         printfn "Files are the same"
         let longer_lines = File.ReadLines file_one_path |> findLongerLines
@@ -53,6 +54,7 @@ let main argv =
         let lines_one = File.ReadLines file_one_path
         let lines_two = File.ReadLines file_two_path
         checkLines lines_one lines_two
+    printfn "Validated text files!"
 
     0 // return an integer exit code
 
