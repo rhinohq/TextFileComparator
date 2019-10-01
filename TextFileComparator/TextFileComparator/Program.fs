@@ -16,8 +16,8 @@ let sameInstanceOfLine (lines_one : IEnumerable<string>) (lines_two : IEnumerabl
         lines_one.Any(fun x -> lines_two.Contains x)
 
 let checkLines lines_one lines_two = 
-    if sameInstanceOfLine lines_one lines_two  
-        then Console.WriteLine "One or more lines are the same"
+    if sameInstanceOfLine lines_one lines_two then
+        Console.WriteLine "One or more lines are the same"
     else 
         Console.WriteLine "Files are in no way similar"
 
